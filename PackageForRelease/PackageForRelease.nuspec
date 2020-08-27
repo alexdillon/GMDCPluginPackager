@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <version>1.0.0</version>
+    <authors>Alex Dillon</authors>
+    <owners>Alex Dillon</owners>
+    <projectUrl>https://github.com/alexdillon/GMDCPluginPackager</projectUrl>
+    <license type="expression">MIT</license>
+    
+    <id>GMDCPluginPackager</id>
+    <title>GMDC Plugin Packager</title>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Tools to automatically bundle and release plugins for GMDC</description>
+    <copyright>Copyright Alex Dillon© 2020</copyright>
+
+    <dependencies>
+      <group targetFramework=".NETFramework4.6" />
+      <group targetFramework="netcoreapp3.1" />
+      <group targetFramework="netstandard1.0" />
+    </dependencies>
+    
+  </metadata>
+
+  <files>
+    <file src="_._" target="lib/netcoreapp3.1/" />
+    <file src="_._" target="lib/net46/" />
+    <file src="_._" target="lib/netstandard1.0/" />
+
+    <file src="bin\Release\net46\**\*" target="tools/net46/" />
+    <file src="bin\Release\netcoreapp3.1\**\*" target="tools/netcoreapp3.1/" />
+  </files>
+</package>
